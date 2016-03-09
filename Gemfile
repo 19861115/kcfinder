@@ -12,6 +12,7 @@ end
 # -- database --
 group :test, :development do
   gem 'sqlite3'
+  gem 'pg'
 end
 
 # -- document --
