@@ -24,6 +24,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rubocop'
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
 end
 
 group :development, :test do
