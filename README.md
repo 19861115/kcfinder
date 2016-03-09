@@ -1,5 +1,7 @@
 # kcfinder : Kindle Comic Finder
 
+[![Build Status](https://travis-ci.org/19861115/kcfinder.svg?branch=master)](https://travis-ci.org/19861115/kcfinder)
+
 ## なにこれ
 
 ### 概要
