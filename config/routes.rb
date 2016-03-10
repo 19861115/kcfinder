@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comics
   resources :publishers
   resources :authors
   # The priority is based upon order of creation: first created -> highest priority.
