@@ -9,6 +9,7 @@ cache: bundler
  
 before_script:
   - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
   - bundle exec rake db:create
   - bundle exec rake db:migrate
  

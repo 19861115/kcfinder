@@ -1,4 +1,4 @@
-Spec.configure do |config|
+RSpec.configure do |config|
   FG = FactoryGirl
 
   config.before(:all) do
