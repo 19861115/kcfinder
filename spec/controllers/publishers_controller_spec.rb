@@ -23,11 +23,11 @@ RSpec.describe PublishersController, type: :controller do
   # Publisher. As you add validations to Publisher, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+    { name: 'test publisher' }
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    { name: ' ' }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -102,14 +102,14 @@ RSpec.describe PublishersController, type: :controller do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
+        { name: 'new test publisher' }
       end
 
       it 'updates the requested publisher' do
         publisher = Publisher.create! valid_attributes
         put :update, { id: publisher.to_param, publisher: new_attributes }, valid_session
         publisher.reload
-        skip('Add assertions for updated state')
+        expect(publisher.name).to eq('new test publisher')
       end
 
       it 'assigns the requested publisher as @publisher' do
