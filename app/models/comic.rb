@@ -4,4 +4,6 @@ class Comic < ActiveRecord::Base
 
   validates :asin, presence: true
   validates :image_path, presence: true
+  validates :author, presence: true
+  validates :publisher, presence: true
 end

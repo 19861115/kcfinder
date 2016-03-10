@@ -19,17 +19,26 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe ComicsController, type: :controller do
+  before do
+    @author = FG.create(:author)
+    @publisher = FG.create(:publisher)
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Comic. As you add validations to Comic, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
     { asin: 'test comic asin',
-      image_path: 'test comic image_path' }
+      image_path: 'test comic image_path',
+      author_id: @author.id,
+      publisher_id: @publisher.id }
   end
 
   let(:invalid_attributes) do
     { asin: ' ',
-      image_path: ' ' }
+      image_path: ' ',
+      author_id: @author.id,
+      publisher_id: @publisher.id }
   end
 
   # This should return the minimal set of values that should be in the session

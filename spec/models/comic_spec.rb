@@ -37,4 +37,18 @@ RSpec.describe Comic, type: :model do
       expect(subject).to be_valid
     end
   end
+
+  describe Comic, '#author がnilの場合' do
+    before { subject.author = nil }
+    specify 'validationに失敗すること' do
+      expect(subject).not_to be_valid
+    end
+  end
+
+  describe Comic, '#publisher がnilの場合' do
+    before { subject.publisher = nil }
+    specify 'validationに失敗すること' do
+      expect(subject).not_to be_valid
+    end
+  end
 end
