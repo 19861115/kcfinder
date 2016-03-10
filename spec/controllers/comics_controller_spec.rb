@@ -23,11 +23,13 @@ RSpec.describe ComicsController, type: :controller do
   # Comic. As you add validations to Comic, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+    { asin: 'test comic asin',
+      image_path: 'test comic image_path' }
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    { asin: ' ',
+      image_path: ' ' }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -102,14 +104,15 @@ RSpec.describe ComicsController, type: :controller do
   describe 'PUT #update' do
     context 'with valid params' do
       let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
+        { asin: 'new test comic asin', image_path: 'new test comic image_path' }
       end
 
       it 'updates the requested comic' do
         comic = Comic.create! valid_attributes
         put :update, { id: comic.to_param, comic: new_attributes }, valid_session
         comic.reload
-        skip('Add assertions for updated state')
+        expect(comic.asin).to eq('new test comic asin')
+        expect(comic.image_path).to eq('new test comic image_path')
       end
 
       it 'assigns the requested comic as @comic' do
