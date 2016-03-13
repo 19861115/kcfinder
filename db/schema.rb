@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310115134) do
+ActiveRecord::Schema.define(version: 20160310134641) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "comics", force: :cascade do |t|
+    t.string   "asin"
+    t.string   "image_path"
+    t.integer  "author_id"
+    t.integer  "publisher_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "comics", ["author_id"], name: "index_comics_on_author_id"
+  add_index "comics", ["publisher_id"], name: "index_comics_on_publisher_id"
 
   create_table "publishers", force: :cascade do |t|
     t.string   "name"

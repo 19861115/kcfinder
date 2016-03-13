@@ -6,6 +6,7 @@ RSpec.describe Publisher, type: :model do
   subject { @publisher }
 
   it { expect(subject).to respond_to(:name) }
+  it { expect(subject).to respond_to(:comics) }
 
   describe Publisher, '#name が空の場合' do
     before { subject.name = ' ' }

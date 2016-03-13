@@ -6,6 +6,7 @@ RSpec.describe Author, type: :model do
   subject { @author }
 
   it { expect(subject).to respond_to(:name) }
+  it { expect(subject).to respond_to(:comics) }
 
   describe Author, '#name が空の場合' do
     before { subject.name = ' ' }
