@@ -11,6 +11,7 @@ group :default do
   gem 'twitter-bootswatch-rails-helpers'
   gem 'less-rails'
   gem 'therubyracer'
+  gem 'amazon-ecs'
 end
 
 # -- database --
@@ -42,4 +43,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'dotenv-rails'
 end
