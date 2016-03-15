@@ -1,6 +1,6 @@
 require 'amazon/ecs'
 
-class Tasks
+module Tasks
   class ComicGetter
     class << self
       def execute
