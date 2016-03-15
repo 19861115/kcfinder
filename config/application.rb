@@ -45,5 +45,7 @@ module Kcfinder
         integration_tool: false
       g.jbuilder false
     end
+
+    config.autoload_paths += Dir["#{config.root}/lib"]
   end
 end

@@ -11,6 +11,7 @@ group :default do
   gem 'twitter-bootswatch-rails-helpers'
   gem 'less-rails'
   gem 'therubyracer'
+  gem 'amazon-ecs'
 end
 
 # -- database --
