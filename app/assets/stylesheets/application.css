@@ -15,3 +15,25 @@
  *= require readable/loader
  *= require readable/bootswatch
  */
+
+img {
+  width: auto;
+}
+
+@media screen and (min-width: 480px) {
+  img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  img {
+    max-height: 200px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  img {
+    max-height: 400px;
+  }
+}
