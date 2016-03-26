@@ -12,6 +12,7 @@ group :default do
   gem 'less-rails'
   gem 'therubyracer'
   gem 'amazon-ecs'
+  gem 'kaminari'
 end
 
 # -- database --
