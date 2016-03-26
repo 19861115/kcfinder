@@ -30,6 +30,7 @@ RSpec.describe ComicsController, type: :controller do
   let(:valid_attributes) do
     { asin: 'test comic asin',
       image_path: 'test comic image_path',
+      title: 'test title',
       author_id: @author.id,
       publisher_id: @publisher.id }
   end
@@ -37,6 +38,7 @@ RSpec.describe ComicsController, type: :controller do
   let(:invalid_attributes) do
     { asin: ' ',
       image_path: ' ',
+      title: ' ',
       author_id: @author.id,
       publisher_id: @publisher.id }
   end

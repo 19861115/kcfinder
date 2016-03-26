@@ -6,6 +6,7 @@ RSpec.describe Comic, type: :model do
   subject { @comic }
 
   it { expect(subject).to respond_to(:asin) }
+  it { expect(subject).to respond_to(:title) }
   it { expect(subject).to respond_to(:image_path) }
   it { expect(subject).to respond_to(:author) }
   it { expect(subject).to respond_to(:publisher) }
@@ -33,6 +34,20 @@ RSpec.describe Comic, type: :model do
 
   describe Comic, '#image_path が空でない場合' do
     before { subject.image_path = 'a' }
+    specify 'validationに成功すること' do
+      expect(subject).to be_valid
+    end
+  end
+
+  describe Comic, '#title が空の場合' do
+    before { subject.title = ' ' }
+    specify 'validationに失敗すること' do
+      expect(subject).not_to be_valid
+    end
+  end
+
+  describe Comic, '#title が空でない場合' do
+    before { subject.title = 'a' }
     specify 'validationに成功すること' do
       expect(subject).to be_valid
     end
